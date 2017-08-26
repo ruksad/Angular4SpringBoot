@@ -1,9 +1,9 @@
 export class LoggerProps {
   logLevel: string;
-  serverLogLevel?: string;
-  serverLogURI?: string;
+  serverLogLevel ? : string;
+  serverLogURI ? : string;
 }
 
-export var defaultLoggerProps:LoggerProps={
-  logLevel:'DEBUG'
+export var defaultLoggerProps: LoggerProps = {
+  logLevel: 'DEBUG'
 }

@@ -73,7 +73,6 @@ export class LoggerServiceService {
         return;
     }
 
-    //if the log level is greater than the environ
     if (LoggerLevel[level] >= LoggerLevel[this._loggerProps.logLevel]) {
       console.log(`%c${moment.utc().format()} [${level}] %c${message}`, `color:${levelColor}`, 'color:black');
 
