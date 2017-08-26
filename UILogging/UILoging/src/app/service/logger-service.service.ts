@@ -14,8 +14,7 @@ export class LoggerServiceService {
   constructor(private http: Http,
   @Inject(defaultLoggerProps)@Optional() loggerProps: LoggerProps) {
     this._loggerProps = loggerProps;
-    console.log("loggerProps= ",this._loggerProps);
-
+    this.info("UI mmessgage props are"+ JSON.stringify(this._loggerProps))
   }
 
 	public set loggerProps(value: LoggerProps) {
@@ -103,10 +102,10 @@ export class LoggerServiceService {
         level: level,
         message: message
       }, options)
-      .map(res => res.json())
+      .map(res => res.text())
       .catch(error => error)
       .subscribe(
-        res => null,
+        res => {},
         error => this._logMessage('ERROR', 'SOMETHING WENT WRONG WHILE LOGGING ON SERVER', false)
       );
 
