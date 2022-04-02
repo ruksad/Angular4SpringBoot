@@ -81,7 +81,7 @@
 							<arguments>install</arguments>
 						</configuration>
 					</execution>
-					<!-- It will execute command "npm build" inside "/fulfillmenthub-web"
+					<!-- It will execute command "npm build" inside "/UILogging"
             directory -->
 					<execution>
 						<id>npm build</id>
